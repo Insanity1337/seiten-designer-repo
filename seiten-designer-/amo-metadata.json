@@ -1,0 +1,15 @@
+{
+  "default_locale": "de",
+  "categories": ["appearance"],
+  "summary": {
+    "de": "Passe Layout und Aussehen jeder Website visuell an – ohne Programmierkenntnisse. Alle Daten bleiben lokal in deinem Browser.",
+    "en-US": "Visually customize the layout and look of any website – no coding needed. All data stays locally in your browser."
+  },
+  "support_email": {
+    "de": "jdthereal@tuta.com",
+    "en-US": "jdthereal@tuta.com"
+  },
+  "version": {
+    "license": "MIT"
+  }
+}

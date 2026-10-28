@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <div>
+      <div class="title">Seiten-Designer</div>
+      <div class="host" id="host">…</div>
+    </div>
+  </header>
+
+  <section id="blocked" hidden>
+    <p class="note">Diese Seite kann von Firefox-Erweiterungen nicht verändert werden (z. B. interne Seiten oder der Add-on-Store).</p>
+  </section>
+
+  <section id="main" hidden>
+    <div id="perm" class="warn" hidden>
+      <p>Damit deine Anpassungen beim nächsten Besuch automatisch wieder erscheinen, braucht die Erweiterung Zugriff auf Websites.</p>
+      <button id="grant" class="btn">Zugriff erlauben</button>
+    </div>
+
+    <button id="edit" class="btn primary big">✏️ Diese Seite bearbeiten</button>
+    <p class="shortcut">Tastenkürzel: <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd></p>
+
+    <label class="switch-row">
+      <span>Anpassungen auf dieser Domain anzeigen</span>
+      <span class="switch"><input type="checkbox" id="enabled"><span></span></span>
+    </label>
+    <p class="stats" id="stats"></p>
+
+    <div class="row">
+      <button id="export" class="btn">Kopieren</button>
+      <button id="import" class="btn">Einfügen</button>
+      <button id="reset" class="btn danger">Zurücksetzen</button>
+    </div>
+    <div id="importBox" hidden>
+      <textarea id="importText" placeholder="Kopierte Anpassungen hier einfügen …"></textarea>
+      <button id="importApply" class="btn primary">Übernehmen</button>
+    </div>
+    <p class="msg" id="msg"></p>
+  </section>
+
+  <script src="../lib/store.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

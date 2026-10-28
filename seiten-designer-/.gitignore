@@ -1,0 +1,16 @@
+# Build- und Signier-Ergebnisse
+dist/
+web-ext-artifacts/
+*.xpi
+*.zip
+
+# Werkzeuge
+node_modules/
+
+# Zugangsdaten niemals einchecken
+.env
+*.secret
+
+# System
+.DS_Store
+Thumbs.db

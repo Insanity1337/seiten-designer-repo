@@ -1,0 +1,62 @@
+{
+  "manifest_version": 3,
+  "name": "Seiten-Designer",
+  "version": "1.0.1",
+  "description": "Passe Layout und Aussehen jeder Website visuell an – ohne Programmierkenntnisse. Änderungen gelten auf allen Seiten derselben Domain.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{52cdb867-155d-4eba-bb6c-b1db43b4b50d}",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  },
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "action": {
+    "default_title": "Seiten-Designer",
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon.svg"
+  },
+  "commands": {
+    "toggle-editor": {
+      "suggested_key": {
+        "default": "Alt+Shift+E"
+      },
+      "description": "Editor auf der aktuellen Seite öffnen/schließen"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "lib/store.js",
+        "lib/selector.js",
+        "lib/templates.js",
+        "lib/layouts.js",
+        "content/apply.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
