@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Seiten-Designer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Passe Layout und Aussehen jeder Website visuell an – ohne Programmierkenntnisse. Änderungen gelten auf allen Seiten derselben Domain.",
   "browser_specific_settings": {
     "gecko": {
